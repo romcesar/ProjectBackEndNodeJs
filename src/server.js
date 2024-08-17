@@ -1,7 +1,9 @@
 const express = require('express');
 
 const sequelize = require('./config/database');
-const userRoutes = require('./routes/UserRotas');
+const Rotas = require('./routes/Rotas');
+const RotasUser = require('./routes/RotasUser');
+
 
 require('dotenv').config();
 
@@ -10,7 +12,9 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
-app.use('/users', userRoutes);
+app.use('/v1/users', Rotas);
+app.use('/v1/users', RotasUser);
+
 
 sequelize.sync().then(() => {
 
