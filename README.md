@@ -110,6 +110,9 @@ root/
 <p><strong>Produtos:</strong> Faça requisições CRUD para a rota <code>/api/products</code>.</p>
 <p><strong>Autenticação:</strong> Utilize as rotas de login e registro em <code>/api/users/register</code> e <code>/api/users/login</code> para gerenciar tokens JWT.</p>
 
+<h2>Endpoints:</h2>
+https://documenter.getpostman.com/view/16679987/2sA3s9D8WA
+
 <h2 id="colab">🤝 Colaboradores</h2>
 
 <p>Um agradecimento especial às seguintes pessoas:</p>
