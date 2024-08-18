@@ -28,7 +28,7 @@ exports.login = async (req, res) => {
             return res.status(401).json({ error: 'Credenciais Inválidas' });
         }
         return res.json({
-            token: generateToken(user)
+            token: this.generateToken(user)
         });
     } catch (error) {
         res.status(500).json({ error: error.message });
@@ -40,6 +40,7 @@ exports.verifyToken = (req, res, next) => {
 
     const token = req.headers['authorization'];
 
+    console.log('ver token: ' + token);
 
     if (!token) {
         return res.status(403).json({ error: 'No token provided' });
@@ -48,7 +49,7 @@ exports.verifyToken = (req, res, next) => {
     jwt.verify(token, process.env.APP_KEY, (err, decoded) => {
 
         if (err) {
-            return res.status(401).json({ error: 'Failed to authenticate token' });
+            return res.status(401).json({ error: 'Falha na authenticação com o token' });
         }
         req.userId = decoded.id; next();
     });

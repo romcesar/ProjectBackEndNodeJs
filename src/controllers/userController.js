@@ -19,9 +19,8 @@ exports.CreateUser = async (req, res) => {
 
     console.log(firstname, username, hashedPassword)
     try {
-        console.log("chegou no try")
         const user = await User.create({
-            firstname, username, password, email, surname
+            firstname, username, password: hashedPassword, email, surname
         });
 
         console.log(user);
@@ -33,3 +32,55 @@ exports.CreateUser = async (req, res) => {
         res.status(400).json({ error: error.message });
     }
 };
+
+exports.GetAllUsers = async (req, res) => {
+    try {
+        const users = await User.findAll();
+        res.json(users);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+}
+
+exports.GetUserById = async (req, res) => {
+    try {
+        const user = await User.findByPk(req.params.id);
+        res.json(user);
+
+    } catch (error) {
+
+        res.status(404).json({ error: 'User not found' });
+    }
+}
+
+exports.UpdateUser = async (req, res) => {
+
+    try {
+        const user = await User.findByPk(req.params.id);
+        if (!user) {
+            return res.status(404).json({ error: 'User not found' });
+        }
+
+        const updatedUser = await user.update(req.body);
+        res.json(updatedUser);
+
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+}
+
+exports.DeleteUser = async (req, res) => {
+
+    try {
+        const user = await User.findByPk(req.params.id);
+        if (!user) {
+            return res.status(404).json({ error: 'User not found' });
+        }
+        await user.destroy();
+        res.json({ message: 'User deleted successfully' });
+
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+
+}
