@@ -112,21 +112,19 @@ root/
 
 <h2 id="colab">🤝 Colaboradores</h2>
 
-<h2 id="colab">🤝 Colaboradores</h2>
-
 <p>Um agradecimento especial às seguintes pessoas:</p>
 
 <table>
   <tr>
     <td align="center">
       <a href="#">
-        <img src="C:\Users\Hanye\Downloads\ROMIM.jpg" width="100px;" alt="Rômulo Cesar imagem"/><br>
+        <img src="https://github.com/romcesar/ProjectBackEndNodeJs/blob/main/ROMIM.jpg?raw=true" width="100px;" alt="Rômulo Cesar imagem"/><br>
         <sub><b>Rômulo Cesar</b></sub>
       </a>
     </td>
     <td align="center">
       <a href="#">
-        <img src="C:\Users\Hanye\Downloads\HANYEL.jpg" width="100px;" alt="Guilherme Uchôa imagem"/><br>
+        <img src="https://github.com/romcesar/ProjectBackEndNodeJs/blob/main/HANYEL.jpg" width="100px;" alt="Guilherme Uchôa imagem"/><br>
         <sub><b>Guilherme Uchôa</b></sub>
       </a>
     </td>
