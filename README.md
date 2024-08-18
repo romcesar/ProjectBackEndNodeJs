@@ -36,10 +36,10 @@ npm install
 <h4>Configure o arquivo .env:</h4>
 <p>Crie um arquivo <code>.env</code> na raiz do projeto com o seguinte conteúdo:</p>
 <pre><code>
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=root
-DB_NAME=seu_banco_de_dados
+HOSTNAME=localhost
+USERDB=root
+SENHADB=root
+DATABASE=seu_banco_de_dados
 JWT_SECRET=sua_chave_secreta
 </code></pre>
 
@@ -71,6 +71,13 @@ npm test
 <pre><code>
 root/
 ├── node_modules/
+├── config/
+      └── config.json         # configuração de migraions
+
+ ├── migrations/              # migraions historico
+      
+├── models/                   # configuração models migrations migraions
+      └── index.js
 ├── src/
 │   ├── config/
 │   │   └── database.js       # Configuração do Sequelize e conexão com MySQL 
@@ -95,8 +102,7 @@ root/
 │   │   ├── category.test.js  # Testes unitários para Categorias 
 │   │   ├── product.test.js   # Testes unitários para Produtos 
 │   │   └── user.test.js      # Testes unitários para Usuários 
-│   ├── app.js                # Arquivo principal de configuração do app  
-│   └── server.js             # Inicialização do servidor 
+│   ├── server.js               # Arquivo principal de configuração do app  
 ├── .env                      # Configurações do ambiente 
 ├── .gitignore                # Arquivos e pastas a serem ignorados pelo Git 
 ├── package.json              # Dependências do projeto e scripts 
@@ -105,10 +111,10 @@ root/
 
 <h2>Uso:</h2>
 
-<p><strong>Usuários:</strong> Faça requisições CRUD para a rota <code>/api/users</code>.</p>
-<p><strong>Categorias:</strong> Faça requisições CRUD para a rota <code>/api/categories</code>.</p>
-<p><strong>Produtos:</strong> Faça requisições CRUD para a rota <code>/api/products</code>.</p>
-<p><strong>Autenticação:</strong> Utilize as rotas de login e registro em <code>/api/users/register</code> e <code>/api/users/login</code> para gerenciar tokens JWT.</p>
+<p><strong>Usuários:</strong> Faça requisições CRUD para a rota <code>/api/user</code>.</p>
+<p><strong>Categorias:</strong> Faça requisições CRUD para a rota <code>/api/category</code>.</p>
+<p><strong>Produtos:</strong> Faça requisições CRUD para a rota <code>/api/product</code>.</p>
+<p><strong>Autenticação:</strong> Utilize as rotas de login e validação de usuario em <code>/api/users/token</code> e <code>/api/users/valida</code> para gerenciar tokens JWT.</p>
 
 <h2>Endpoints:</h2>
 https://documenter.getpostman.com/view/16679987/2sA3s9D8WA
