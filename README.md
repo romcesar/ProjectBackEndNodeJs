@@ -1,5 +1,3 @@
-[PROJECT__BADGE]: https://img.shields.io/badge/📱Visit_this_project-000?style=for-the-badge&logo=project
-[PROJECT__URL]: https://github.com/romcesar/ProjectBackEndNodeJs/tree/main
 
 <h1 align="center" style="font-weight: bold;">Projeto BackEnd NodeJs 💻</h1>
 
@@ -14,11 +12,7 @@
 
 <p>Um projeto de backend construído com Node.js, Express.js e Sequelize. Ele implementa um sistema de gerenciamento de usuários, categorias e produtos, incluindo autenticação JWT. O projeto utiliza um banco de dados MySQL para persistência dos dados.</p>
 
-<p align="center">
-  <a href="[PROJECT__URL]"><img src="[PROJECT__BADGE]" alt="Project Badge"></a>
-</p>
-
-<h2>Prerequisites</h2>
+<h2>Pré-requisitos</h2>
 
 <ul>
   <li>Node.js - v20.15.1 ou superior</li>
@@ -115,6 +109,8 @@ root/
 <p><strong>Categorias:</strong> Faça requisições CRUD para a rota <code>/api/categories</code>.</p>
 <p><strong>Produtos:</strong> Faça requisições CRUD para a rota <code>/api/products</code>.</p>
 <p><strong>Autenticação:</strong> Utilize as rotas de login e registro em <code>/api/users/register</code> e <code>/api/users/login</code> para gerenciar tokens JWT.</p>
+
+<h2 id="colab">🤝 Colaboradores</h2>
 
 <h2 id="colab">🤝 Colaboradores</h2>
 
